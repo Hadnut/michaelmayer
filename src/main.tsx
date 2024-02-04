@@ -5,6 +5,8 @@ import App from './appRoot/App';
 import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/Home';
+import Contact from './pages/Contact';
+import Portfolio from './pages/Portfolio';
 
 export function main() {
   const router = createBrowserRouter([
@@ -18,11 +20,11 @@ export function main() {
         },
         {
           path: '/portfolio',
-          element: <div>about</div>,
+          element: <Portfolio />,
         },
         {
           path: '/contact',
-          element: <div>contact</div>,
+          element: <Contact />,
         },
       ],
     },
