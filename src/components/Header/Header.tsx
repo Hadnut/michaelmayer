@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { NavItem } from '../../types';
 import { NavLink } from 'react-router-dom';
@@ -26,6 +26,7 @@ export default function Navbar({ navItems }: NavbarProps) {
       <ul className="hidden md:flex">
         {navItems.map((item) => (
           <NavLink
+            key={item.id}
             to={`${item.route}`}
             className={({ isActive }) =>
               isActive ? 'bg-black text-white ' + navItemStyle : navItemStyle
