@@ -11,9 +11,13 @@ export default function Home() {
       <h2 className="mb-8 text-3xl text-black">
         <span className="text-gray-500">Creative</span> {headline}
       </h2>
-      <div className="w-fit border-2 border-black bg-black px-7 py-4 font-bold text-white transition-all duration-300 hover:bg-opacity-0 hover:text-black">
-        <NavLink to={'/contact'}>Get in Touch</NavLink>
-      </div>
+
+      <NavLink
+        className="block w-fit border-2 border-black bg-black px-7 py-4 font-bold text-white transition-all duration-300 hover:bg-opacity-0 hover:text-black"
+        to={'/contact'}
+      >
+        Get in Touch
+      </NavLink>
     </div>
   );
 }
