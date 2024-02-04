@@ -3,14 +3,35 @@ import { createRoot } from 'react-dom/client';
 import reportWebVitals from './utilities/reportWebVitals';
 import App from './appRoot/App';
 import './index.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Home from './pages/Home';
 
-// Wrap in main() so that tests can import this file
 export function main() {
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <App />,
+      children: [
+        {
+          index: true,
+          element: <Home />,
+        },
+        {
+          path: '/portfolio',
+          element: <div>about</div>,
+        },
+        {
+          path: '/contact',
+          element: <div>contact</div>,
+        },
+      ],
+    },
+  ]);
   const rootDiv = document.getElementById('root');
   if (rootDiv) {
     createRoot(rootDiv).render(
       <StrictMode>
-        <App />
+        <RouterProvider router={router} />
       </StrictMode>
     );
   }

@@ -1,6 +1,7 @@
-import {Key} from "react";
+import { Key } from 'react';
 
 export interface NavItem {
-    id: Key,
-    text: String
+  id: Key;
+  text: string;
+  route: string;
 }
