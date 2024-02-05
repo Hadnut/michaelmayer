@@ -21,7 +21,6 @@ export default function Navbar({ navItems }: NavbarProps) {
     <div className="sticky top-0 mx-auto flex h-16 items-center justify-between bg-white text-black">
       {/* Logo */}
       <h1 className="w-full text-2xl font-extrabold">{title}</h1>
-
       {/* Desktop Navigation */}
       <ul className="hidden md:flex">
         {navItems.map((item) => (

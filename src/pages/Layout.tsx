@@ -12,7 +12,7 @@ export default function Layout() {
             className="h-full w-full object-cover object-center"
           />
         </div>
-        <div className="flex items-center overflow-auto md:col-span-5">
+        <div className="md:col-span-5">
           <Outlet />
         </div>
       </div>
