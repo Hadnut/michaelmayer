@@ -1,5 +1,3 @@
-// Curtain.js
-
 import { useState, useEffect } from 'react';
 
 const Curtain = () => {
@@ -15,7 +13,7 @@ const Curtain = () => {
     // Start the line animation after a short delay (adjust as needed)
     const lineAnimationTimeout = setTimeout(() => {
       setLineAnimation(true);
-    }, 500);
+    }, 100);
 
     return () => {
       clearTimeout(timeout);
@@ -28,11 +26,9 @@ const Curtain = () => {
       <div
         className={`fixed left-0 top-0 z-10 h-full w-full transform bg-black transition-transform duration-1000 ${isLoaded ? '-translate-x-full' : '-translate-x-1/2'}`}
       />
-      {!isLoaded && (
-        <div
-          className={`fixed left-1/2 top-0 h-full w-0.5 origin-center transform bg-white transition-transform duration-1000 scale-y-${lineAnimation ? '100' : '0'} z-20`}
-        />
-      )}
+      <div
+        className={`fixed left-1/2 top-0 h-full w-0.5 origin-center transform bg-white ${isLoaded ? 'invisible' : 'visible'} transition-transform duration-1000 scale-y-${lineAnimation ? '100' : '0'} z-20`}
+      />
       <div
         className={`fixed left-0 top-0 z-10 h-full w-full transform bg-black transition-transform duration-1000 ${isLoaded ? 'translate-x-full' : 'translate-x-1/2'}`}
       />
