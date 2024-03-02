@@ -7,8 +7,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Portfolio from './pages/Portfolio';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
 export function main() {
+  const queryClient = new QueryClient();
   const router = createBrowserRouter([
     {
       path: '/',
@@ -33,7 +35,9 @@ export function main() {
   if (rootDiv) {
     createRoot(rootDiv).render(
       <StrictMode>
-        <RouterProvider router={router} />
+        <QueryClientProvider client={queryClient}>
+          <RouterProvider router={router} />
+        </QueryClientProvider>
       </StrictMode>
     );
   }

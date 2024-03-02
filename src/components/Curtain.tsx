@@ -1,6 +1,6 @@
 // Curtain.js
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const Curtain = () => {
   const [isLoaded, setIsLoaded] = useState(false);

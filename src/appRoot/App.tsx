@@ -1,5 +1,6 @@
 import Layout from '../pages/Layout';
-import Navbar from '../components/Header/Header';
+import Header from '../components/Header/Header';
+import Curtain from '../components/Curtain';
 
 export default function App() {
   const navItems = [
@@ -9,9 +10,12 @@ export default function App() {
   ];
 
   return (
-    <div className="pl-20 pr-20">
-      <Navbar navItems={navItems} />
-      <Layout />
-    </div>
+    <>
+      <Curtain />
+      <div className="pl-20 pr-20">
+        <Header navItems={navItems} />
+        <Layout />
+      </div>
+    </>
   );
 }
