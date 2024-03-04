@@ -10,9 +10,6 @@ module.exports = {
       animation: {
         'spin-react': 'spin 20s linear infinite',
       },
-      transitionDuration: {
-        2000: '2000ms',
-      },
     },
   },
   plugins: [require('flowbite/plugin')],
