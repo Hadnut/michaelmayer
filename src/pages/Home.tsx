@@ -5,7 +5,7 @@ export default function Home() {
   const [headline] = useTypingHeadlines(['Fullstack Developer', 'Cloud Engineer', 'Tech Lead']);
 
   return (
-    <div className="flex h-screen items-center overflow-auto">
+    <div className="flex h-full items-center">
       <div className="pl-10 xl:pl-20">
         <h1 className="text-6xl font-extrabold text-gray-800">MICHAEL MAYER</h1>
         <div className="mb-8 mt-8 w-20 border-2 border-black"></div>

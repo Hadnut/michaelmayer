@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-import { NavItem } from '../../types';
+import { NavItem } from '../types';
 import { NavLink } from 'react-router-dom';
 
 interface NavbarProps {
@@ -18,7 +18,7 @@ export default function Header({ navItems }: NavbarProps) {
     'p-2 pl-8 pr-8 hover:bg-black cursor-pointer duration-500 hover:text-white text-lg';
 
   return (
-    <div className="sticky top-0 mx-auto flex h-16 items-center justify-between bg-white text-black">
+    <header className="flex h-16 items-center justify-between bg-white text-black">
       {/* Logo */}
       <h1 className="w-full text-2xl font-extrabold">{title}</h1>
       {/* Desktop Navigation */}
@@ -65,6 +65,6 @@ export default function Header({ navItems }: NavbarProps) {
           </li>
         ))}
       </ul>
-    </div>
+    </header>
   );
 }

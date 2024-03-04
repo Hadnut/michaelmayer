@@ -1,6 +1,7 @@
 import Layout from '../pages/Layout';
-import Header from '../components/Header/Header';
+import Header from '../components/Header';
 import Curtain from '../components/Curtain';
+import Footer from '../components/Footer';
 
 export default function App() {
   const navItems = [
@@ -12,9 +13,10 @@ export default function App() {
   return (
     <>
       <Curtain />
-      <div className="pl-20 pr-20">
+      <div className="flex h-screen flex-col pl-20 pr-20">
         <Header navItems={navItems} />
         <Layout />
+        <Footer />
       </div>
     </>
   );
