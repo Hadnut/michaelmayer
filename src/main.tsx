@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import reportWebVitals from './utilities/reportWebVitals';
 import App from './appRoot/App';
 import './index.css';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createMemoryRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Portfolio from './pages/Portfolio';
@@ -11,7 +11,7 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 
 export function main() {
   const queryClient = new QueryClient();
-  const router = createBrowserRouter([
+  const router = createMemoryRouter([
     {
       path: '/',
       element: <App />,
