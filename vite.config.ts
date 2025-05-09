@@ -8,7 +8,7 @@ import { visualizer } from 'rollup-plugin-visualizer';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/',
+  base: "/michaelmayer/",
   build: { sourcemap: true },
   plugins: [
     react(),
