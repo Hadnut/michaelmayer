@@ -1,0 +1,29 @@
+{
+  "aboutSection": {
+    "name": "Michael Mayer",
+    "address": "Schmellerstraße 11, 80337 München",
+    "experience": "7 years",
+    "welcomeText": [
+      "Hello there! My name is Alan Walker. I am a graphic designer, and I am very passionate and dedicated to my work.",
+      "With 20 years experience as a professional a graphic designer, I have acquired the skills and knowledge necessary to make your project a success."
+    ]
+  },
+  "skills": [
+    {
+      "name": "React JS",
+      "value": 90
+    },
+    {
+      "name": "Vue JS",
+      "value": 50
+    },
+    {
+      "name": "Typescript",
+      "value": 90
+    },
+    {
+      "name": "Tailwind",
+      "value": 90
+    }
+  ]
+}
