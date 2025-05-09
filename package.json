@@ -16,7 +16,7 @@
     "prettier": "prettier --write .",
     "test": "vitest --coverage",
     "test:ui": "vitest --ui",
-    "postinstall": "husky install",
+    "postinstall": "husky",
     "prepack": "pinst --disable",
     "postpack": "pinst --enable"
   },
