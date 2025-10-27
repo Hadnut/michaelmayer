@@ -1,5 +1,4 @@
 import { useQuery } from 'react-query';
-import { Progress } from 'flowbite-react';
 import { motion } from 'motion/react';
 
 const profileQuery = () => ({
@@ -72,34 +71,40 @@ export default function Profile() {
           </div>
           <div className="md:w-[50%]">
             <span className="mb-12 inline-block font-bold uppercase tracking-[8px] text-[#333]">
-              Interrests
+              Work Experience
             </span>
-            <ul>
-              <li className="float-left mb-[8px] w-full">Painting Drawing</li>
-              <li className="float-left mb-[8px] w-full ">Reading Writing</li>
-              <li className="float-left mb-[8px] w-full ">Music Cinema</li>
-              <li className="float-left mb-[8px] w-full ">Travel Picnik</li>
-              <li className="float-left w-full">Rain Snow</li>
-            </ul>
-          </div>
-        </div>
-        <div className="mt-16 flex justify-between">
-          <div className="md:w-[45%]">
-            <span className="mb-4 inline-block font-bold uppercase tracking-[8px] text-[#333]">
-              Tech Stack
-            </span>
-            {data?.skills.map((skill, index) => (
-              <div key={index} className="mt-5">
-                <Progress
-                  color="gray"
-                  progress={skill.value}
-                  size="sm"
-                  textLabel={skill.name}
-                  labelText
-                  textLabelPosition="outside"
-                />
+            <div>
+              <div className="relative pl-6 border-l-2 border-gray-200">
+                <div className="absolute -left-2 top-1 w-4 h-4 bg-[#333] rounded-full"></div>
+                <h3 className="font-bold text-[#333] mb-1">Lead Software Engineer</h3>
+                <p className="text-gray-700 mb-1">MaibornWolff GmbH</p>
+                <p className="text-gray-500 text-sm pb-6">2023 - Present</p>
               </div>
-            ))}
+              <div className="relative pl-6 border-l-2 border-gray-200">
+                <div className="absolute -left-2 top-1 w-4 h-4 bg-[#333] rounded-full"></div>
+                <h3 className="font-bold text-[#333] mb-1">Senior Software Engineer</h3>
+                <p className="text-gray-700 mb-1">MaibornWolff GmbH</p>
+                <p className="text-gray-500 text-sm  pb-6">2020 - 2023</p>
+              </div>
+              <div className="relative pl-6 border-l-2 border-gray-200">
+                <div className="absolute -left-2 top-1 w-4 h-4 bg-[#333] rounded-full"></div>
+                <h3 className="font-bold text-[#333] mb-1">Professional Software Engineer</h3>
+                <p className="text-gray-700 mb-1">MaibornWolff GmbH</p>
+                <p className="text-gray-500 text-sm  pb-6">2019 - 2020</p>
+              </div>
+              <div className="relative pl-6 border-l-2 border-gray-200">
+                <div className="absolute -left-2 top-1 w-4 h-4 bg-[#333] rounded-full"></div>
+                <h3 className="font-bold text-[#333] mb-1">Junior Software Engineer</h3>
+                <p className="text-gray-700 mb-1">MaibornWolff GmbH</p>
+                <p className="text-gray-500 text-sm  pb-6">2017 - 2019</p>
+              </div>
+              <div className="relative pl-6 border-l-2 border-gray-200">
+                <div className="absolute -left-2 top-1 w-4 h-4 bg-[#333] rounded-full"></div>
+                <h3 className="font-bold text-[#333] mb-1">Internship Web Engineering</h3>
+                <p className="text-gray-700 mb-1">Robert Bosch GmbH</p>
+                <p className="text-gray-500 text-sm">2015 - 2016</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

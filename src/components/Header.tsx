@@ -15,14 +15,14 @@ export default function Header({ navItems }: NavbarProps) {
 
   const title = 'software engineer.';
   const navItemStyle =
-    'p-2 pl-8 pr-8 hover:bg-black cursor-pointer duration-500 hover:text-white text-lg';
+    'p-2 pl-4 pr-4 hover:bg-black cursor-pointer duration-500 hover:text-white text-lg whitespace-nowrap';
 
   return (
     <header className="flex h-16 items-center justify-between bg-white text-black">
       {/* Logo */}
-      <h1 className="w-full text-2xl font-extrabold">{title}</h1>
+      <h1 className="flex-shrink-0 text-2xl font-extrabold">{title}</h1>
       {/* Desktop Navigation */}
-      <ul className="hidden md:flex">
+      <ul className="hidden md:flex flex-shrink-0 ml-4">
         {navItems.map((item) => (
           <NavLink
             key={item.id}

@@ -7,8 +7,9 @@ export default function App() {
   const navItems = [
     { id: 1, text: 'Home', route: '/' },
     { id: 2, text: 'Profile', route: '/profile' },
-    { id: 3, text: 'Projects', route: '/projects' },
-    { id: 4, text: 'Contact', route: '/contact' },
+    { id: 3, text: 'Tech Stack', route: '/tech-stack' },
+    { id: 4, text: 'Projects', route: '/projects' },
+    { id: 5, text: 'Contact', route: '/contact' },
   ];
 
   return (

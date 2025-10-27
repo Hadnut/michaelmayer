@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { motion } from 'motion/react';
 
 export default function Home() {
-  const [headline] = useTypingHeadlines(['Fullstack Developer', 'Cloud Engineer', 'Tech Lead']);
+  const [headline] = useTypingHeadlines(['Fullstack Developer', 'Clou d Engineer', 'Solutions Architect']);
 
   return (
     <div className="flex h-full items-center">
@@ -48,7 +48,7 @@ export default function Home() {
           }}
         >
           <h2 className="mb-8 text-3xl text-black">
-            <span className="text-gray-500">Creative</span> {headline}
+            <span className="text-gray-500">Lead</span> {headline}
           </h2>
         </motion.div>
 

@@ -62,27 +62,19 @@ export default function Contact() {
                 <span className="second inline-block">{data?.aboutSection.address}</span>
               </li>
               <li className="float-left mb-[8px] w-full">
-                <span className="first inline-block min-w-[100px] font-bold">Degree:</span>
-                <span className="second inline-block">Master of Science</span>
-              </li>
-              <li className="float-left mb-[8px] w-full">
-                <span className="first inline-block min-w-[100px] font-bold">Experience:</span>
-                <span className="second inline-block">{data?.aboutSection.experience}</span>
-              </li>
-              <li className="float-left mb-[8px] w-full">
                 <span className="first inline-block min-w-[100px] font-bold">Mail:</span>
                 <span className="second inline-block">
                   <a
                     className="text-[#7d7789] transition-all duration-300 hover:text-[#333]"
-                    href="mailto:hello@cavani.com"
+                    href="mailto:contact@michael-mayer.me"
                   >
-                    hello@cavani.com
+                    contact@michael-mayer.me
                   </a>
                 </span>
               </li>
               <li className="float-left w-full">
                 <span className="first inline-block min-w-[100px] font-bold">Phone:</span>
-                <span className="second inline-block">+77 022 444 05 05</span>
+                <span className="second inline-block">+49 15730120969</span>
               </li>
             </ul>
           </div>

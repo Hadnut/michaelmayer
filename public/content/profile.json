@@ -2,12 +2,16 @@
   "aboutSection": {
     "name": "Michael Mayer",
     "address": "Schmellerstraße 11, 80337 München",
-    "experience": "7 years",
+    "experience": "9 years",
     "welcomeText": [
       "With more than 9 years of experience in software engineering, I specialize in end-to-end full-stack development. I design robust, scalable, and maintainable software solutions across the frontend, backend, APIs, and database layers, while also overseeing operations and observability. I routinely translate business requirements and user experience into technical implementations that drive efficient, reliable systems deployed in the cloud. I thrive on solving complex business and technical challenges and delivering user-friendly IT solutions that align with strategic goals."
     ]
   },
   "skills": [
+    {
+      "name": "AWS",
+      "value": 85
+    },
     {
       "name": "React JS",
       "value": 90
