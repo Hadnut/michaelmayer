@@ -1,36 +1,102 @@
+import { useQuery } from 'react-query';
+import { motion } from 'motion/react';
+
+const profileQuery = () => ({
+  queryKey: ['profile'],
+  queryFn: async () => getProfile(),
+});
+
+const getProfile = async () =>
+  (await fetch(`../../content/profile.json`).then((res) => res.json())) as Profile;
+
+interface Profile {
+  aboutSection: {
+    name: string;
+    address: string;
+    experience: string;
+    welcomeText: string[];
+  };
+}
+
 export default function Contact() {
+  const { data } = useQuery(profileQuery());
+  
   return (
-    <div className="p-10 xl:p-20">
-      <span className="mb-12 inline-block font-bold uppercase tracking-[8px] text-[#333]">
-        Get in Touch
-      </span>
-      <div className="mt-28 flex justify-between">
-        <div className="md:w-[45%]">
-          <span className="mb-12 inline-block font-bold uppercase tracking-[8px] text-[#333]">
-            Frontend
-          </span>
-          <p>
-            Hello there! My name is Alan Walker. I am a graphic designer, and I am very passionate
-            and dedicated to my work.
-          </p>
-          <p className="mt-5">
-            With 20 years experience as a professional a graphic designer, I have acquired the
-            skills and knowledge necessary to make your project a success.
-          </p>
+    <motion.div
+      animate={{
+        y: 0,
+        opacity: 100,
+        transition: { duration: 1 },
+      }}
+      initial={{
+        y: 20,
+        opacity: 0,
+      }}
+    >
+      <div className="p-10 xl:p-20">
+        <span className="mb-12 inline-block font-bold uppercase tracking-[8px] text-[#333]">
+          Get in Touch
+        </span>
+        
+        <div className="flex justify-between">
+          <div className="md:w-[45%]">
+            <p className="text-gray-700 leading-relaxed">
+              I&apos;m always interested in new opportunities and exciting projects. Whether you&apos;re looking for a technical lead, fullstack developer, or consultant, I&apos;d love to hear from you.
+            </p>
+            <p className="mt-5 text-gray-700 leading-relaxed">
+              With extensive experience in modern web technologies, cloud platforms, and enterprise solutions, I can help bring your ideas to life.
+            </p>
+          </div>
+          
+          <div className="md:w-[50%]">
+            <span className="mb-6 inline-block font-bold uppercase tracking-[8px] text-[#333]">
+              Contact Information
+            </span>
+            <ul>
+              <li className="float-left mb-[8px] w-full">
+                <span className="first inline-block min-w-[100px] font-bold">Name:</span>
+                <span className="second inline-block">{data?.aboutSection.name}</span>
+              </li>
+              <li className="float-left mb-[8px] w-full">
+                <span className="first inline-block min-w-[100px] font-bold">Address:</span>
+                <span className="second inline-block">{data?.aboutSection.address}</span>
+              </li>
+              <li className="float-left mb-[8px] w-full">
+                <span className="first inline-block min-w-[100px] font-bold">Degree:</span>
+                <span className="second inline-block">Master of Science</span>
+              </li>
+              <li className="float-left mb-[8px] w-full">
+                <span className="first inline-block min-w-[100px] font-bold">Experience:</span>
+                <span className="second inline-block">{data?.aboutSection.experience}</span>
+              </li>
+              <li className="float-left mb-[8px] w-full">
+                <span className="first inline-block min-w-[100px] font-bold">Mail:</span>
+                <span className="second inline-block">
+                  <a
+                    className="text-[#7d7789] transition-all duration-300 hover:text-[#333]"
+                    href="mailto:hello@cavani.com"
+                  >
+                    hello@cavani.com
+                  </a>
+                </span>
+              </li>
+              <li className="float-left w-full">
+                <span className="first inline-block min-w-[100px] font-bold">Phone:</span>
+                <span className="second inline-block">+77 022 444 05 05</span>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div className="md:w-[50%]">
-          <span className="mb-12 inline-block font-bold uppercase tracking-[8px] text-[#333]">
-            Interrests
+        
+        <div className="mt-16">
+          <span className="mb-6 inline-block font-bold uppercase tracking-[8px] text-[#333]">
+            Let&apos;s Connect
           </span>
-          <ul>
-            <li className="float-left mb-[8px] w-full">Painting Drawing</li>
-            <li className="float-left mb-[8px] w-full ">Reading Writing</li>
-            <li className="float-left mb-[8px] w-full ">Music Cinema</li>
-            <li className="float-left mb-[8px] w-full ">Travel Picnik</li>
-            <li className="float-left w-full">Rain Snow</li>
-          </ul>
+          <p className="text-gray-700 leading-relaxed">
+            Feel free to reach out via email or phone. I&apos;m based in Germany and available for both remote and on-site projects across Europe.
+          </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

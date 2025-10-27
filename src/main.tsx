@@ -3,15 +3,16 @@ import { createRoot } from 'react-dom/client';
 import reportWebVitals from './utilities/reportWebVitals';
 import App from './appRoot/App';
 import './index.css';
-import { createMemoryRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
-import Portfolio from './pages/Portfolio';
+import Profile from './pages/Profile';
+import Projects from './pages/Projects';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
 export function main() {
   const queryClient = new QueryClient();
-  const router = createMemoryRouter([
+  const router = createHashRouter([
     {
       path: '/',
       element: <App />,
@@ -21,8 +22,12 @@ export function main() {
           element: <Home />,
         },
         {
-          path: '/portfolio',
-          element: <Portfolio />,
+          path: '/profile',
+          element: <Profile />,
+        },
+        {
+          path: '/projects',
+          element: <Projects />,
         },
         {
           path: '/contact',
