@@ -20,7 +20,7 @@ interface Profile {
 
 export default function Contact() {
   const { data } = useQuery(profileQuery());
-  
+
   return (
     <motion.div
       animate={{
@@ -37,17 +37,20 @@ export default function Contact() {
         <span className="mb-12 inline-block font-bold uppercase tracking-[8px] text-[#333]">
           Get in Touch
         </span>
-        
+
         <div className="flex justify-between">
           <div className="md:w-[45%]">
-            <p className="text-gray-700 leading-relaxed">
-              I&apos;m always interested in new opportunities and exciting projects. Whether you&apos;re looking for a technical lead, fullstack developer, or consultant, I&apos;d love to hear from you.
+            <p className="leading-relaxed text-gray-700">
+              I&apos;m always interested in new opportunities and exciting projects. Whether
+              you&apos;re looking for a technical lead, fullstack developer, or consultant, I&apos;d
+              love to hear from you.
             </p>
-            <p className="mt-5 text-gray-700 leading-relaxed">
-              With extensive experience in modern web technologies, cloud platforms, and enterprise solutions, I can help bring your ideas to life.
+            <p className="mt-5 leading-relaxed text-gray-700">
+              With extensive experience in modern web technologies, cloud platforms, and enterprise
+              solutions, I can help bring your ideas to life.
             </p>
           </div>
-          
+
           <div className="md:w-[50%]">
             <span className="mb-6 inline-block font-bold uppercase tracking-[8px] text-[#333]">
               Contact Information
@@ -79,13 +82,14 @@ export default function Contact() {
             </ul>
           </div>
         </div>
-        
+
         <div className="mt-16">
           <span className="mb-6 inline-block font-bold uppercase tracking-[8px] text-[#333]">
             Let&apos;s Connect
           </span>
-          <p className="text-gray-700 leading-relaxed">
-            Feel free to reach out via email or phone. I&apos;m based in Germany and available for both remote and on-site projects across Europe.
+          <p className="leading-relaxed text-gray-700">
+            Feel free to reach out via email or phone. I&apos;m based in Germany and available for
+            both remote and on-site projects across Europe.
           </p>
         </div>
       </div>

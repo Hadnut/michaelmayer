@@ -22,7 +22,7 @@ export default function Header({ navItems }: NavbarProps) {
       {/* Logo */}
       <h1 className="flex-shrink-0 text-2xl font-extrabold">{title}</h1>
       {/* Desktop Navigation */}
-      <ul className="hidden md:flex flex-shrink-0 ml-4">
+      <ul className="ml-4 hidden flex-shrink-0 md:flex">
         {navItems.map((item) => (
           <NavLink
             key={item.id}

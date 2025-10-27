@@ -56,16 +56,16 @@ export default function Profile() {
             </span>
             <div className="space-y-6">
               <div>
-                <h3 className="font-bold text-[#333] mb-2">University of Ulm</h3>
+                <h3 className="mb-2 font-bold text-[#333]">University of Ulm</h3>
                 <p className="text-gray-700">Master of Science (Media Informatics)</p>
                 <p className="text-gray-600">Grade: 1.3</p>
-                <p className="text-gray-500 text-sm">2014 - 2016</p>
+                <p className="text-sm text-gray-500">2014 - 2016</p>
               </div>
               <div>
-                <h3 className="font-bold text-[#333] mb-2">University of Ulm</h3>
+                <h3 className="mb-2 font-bold text-[#333]">University of Ulm</h3>
                 <p className="text-gray-700">Bachelor of Science (Media Informatics)</p>
                 <p className="text-gray-600">Grade: 1.7</p>
-                <p className="text-gray-500 text-sm">2011 - 2014</p>
+                <p className="text-sm text-gray-500">2011 - 2014</p>
               </div>
             </div>
           </div>
@@ -74,35 +74,35 @@ export default function Profile() {
               Work Experience
             </span>
             <div>
-              <div className="relative pl-6 border-l-2 border-gray-200">
-                <div className="absolute -left-2 top-1 w-4 h-4 bg-[#333] rounded-full"></div>
-                <h3 className="font-bold text-[#333] mb-1">Lead Software Engineer</h3>
-                <p className="text-gray-700 mb-1">MaibornWolff GmbH</p>
-                <p className="text-gray-500 text-sm pb-6">2023 - Present</p>
+              <div className="relative border-l-2 border-gray-200 pl-6">
+                <div className="absolute -left-2 top-1 h-4 w-4 rounded-full bg-[#333]"></div>
+                <h3 className="mb-1 font-bold text-[#333]">Lead Software Engineer</h3>
+                <p className="mb-1 text-gray-700">MaibornWolff GmbH</p>
+                <p className="pb-6 text-sm text-gray-500">2023 - Present</p>
               </div>
-              <div className="relative pl-6 border-l-2 border-gray-200">
-                <div className="absolute -left-2 top-1 w-4 h-4 bg-[#333] rounded-full"></div>
-                <h3 className="font-bold text-[#333] mb-1">Senior Software Engineer</h3>
-                <p className="text-gray-700 mb-1">MaibornWolff GmbH</p>
-                <p className="text-gray-500 text-sm  pb-6">2020 - 2023</p>
+              <div className="relative border-l-2 border-gray-200 pl-6">
+                <div className="absolute -left-2 top-1 h-4 w-4 rounded-full bg-[#333]"></div>
+                <h3 className="mb-1 font-bold text-[#333]">Senior Software Engineer</h3>
+                <p className="mb-1 text-gray-700">MaibornWolff GmbH</p>
+                <p className="pb-6 text-sm  text-gray-500">2020 - 2023</p>
               </div>
-              <div className="relative pl-6 border-l-2 border-gray-200">
-                <div className="absolute -left-2 top-1 w-4 h-4 bg-[#333] rounded-full"></div>
-                <h3 className="font-bold text-[#333] mb-1">Professional Software Engineer</h3>
-                <p className="text-gray-700 mb-1">MaibornWolff GmbH</p>
-                <p className="text-gray-500 text-sm  pb-6">2019 - 2020</p>
+              <div className="relative border-l-2 border-gray-200 pl-6">
+                <div className="absolute -left-2 top-1 h-4 w-4 rounded-full bg-[#333]"></div>
+                <h3 className="mb-1 font-bold text-[#333]">Professional Software Engineer</h3>
+                <p className="mb-1 text-gray-700">MaibornWolff GmbH</p>
+                <p className="pb-6 text-sm  text-gray-500">2019 - 2020</p>
               </div>
-              <div className="relative pl-6 border-l-2 border-gray-200">
-                <div className="absolute -left-2 top-1 w-4 h-4 bg-[#333] rounded-full"></div>
-                <h3 className="font-bold text-[#333] mb-1">Junior Software Engineer</h3>
-                <p className="text-gray-700 mb-1">MaibornWolff GmbH</p>
-                <p className="text-gray-500 text-sm  pb-6">2017 - 2019</p>
+              <div className="relative border-l-2 border-gray-200 pl-6">
+                <div className="absolute -left-2 top-1 h-4 w-4 rounded-full bg-[#333]"></div>
+                <h3 className="mb-1 font-bold text-[#333]">Junior Software Engineer</h3>
+                <p className="mb-1 text-gray-700">MaibornWolff GmbH</p>
+                <p className="pb-6 text-sm  text-gray-500">2017 - 2019</p>
               </div>
-              <div className="relative pl-6 border-l-2 border-gray-200">
-                <div className="absolute -left-2 top-1 w-4 h-4 bg-[#333] rounded-full"></div>
-                <h3 className="font-bold text-[#333] mb-1">Internship Web Engineering</h3>
-                <p className="text-gray-700 mb-1">Robert Bosch GmbH</p>
-                <p className="text-gray-500 text-sm">2015 - 2016</p>
+              <div className="relative border-l-2 border-gray-200 pl-6">
+                <div className="absolute -left-2 top-1 h-4 w-4 rounded-full bg-[#333]"></div>
+                <h3 className="mb-1 font-bold text-[#333]">Internship Web Engineering</h3>
+                <p className="mb-1 text-gray-700">Robert Bosch GmbH</p>
+                <p className="text-sm text-gray-500">2015 - 2016</p>
               </div>
             </div>
           </div>
