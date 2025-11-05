@@ -144,7 +144,7 @@ export default function Projects() {
         opacity: 0,
       }}
     >
-      <div className="p-10 xl:p-20">
+      <div className="p-6 sm:p-8 md:p-10 xl:p-20">
         <span className="mb-12 inline-block font-bold tracking-[8px] text-gray-800 dark:text-gray-100 uppercase">
           Projects
         </span>

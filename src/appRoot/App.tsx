@@ -16,7 +16,7 @@ export default function App() {
   return (
     <ThemeProvider>
       <Curtain />
-      <div className="flex h-screen flex-col pr-20 pl-20">
+      <div className="flex h-screen flex-col px-4 sm:px-8 md:px-12 lg:px-20">
         <Header navItems={navItems} />
         <Layout />
         <Footer />

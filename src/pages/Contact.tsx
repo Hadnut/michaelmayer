@@ -33,13 +33,13 @@ export default function Contact() {
         opacity: 0,
       }}
     >
-      <div className="p-10 xl:p-20">
+      <div className="p-6 sm:p-8 md:p-10 xl:p-20">
         <span className="mb-12 inline-block font-bold tracking-[8px] text-gray-800 dark:text-gray-100 uppercase">
           Get in Touch
         </span>
 
-        <div className="flex justify-between">
-          <div className="md:w-[45%]">
+        <div className="flex flex-col md:flex-row justify-between gap-8">
+          <div className="w-full md:w-[45%]">
             <p className="leading-relaxed text-gray-700 dark:text-gray-300">
               I&apos;m always interested in new opportunities and exciting projects. Whether
               you&apos;re looking for a technical lead, fullstack developer, or consultant, I&apos;d
@@ -51,7 +51,7 @@ export default function Contact() {
             </p>
           </div>
 
-          <div className="md:w-[50%]">
+          <div className="w-full md:w-[50%]">
             <span className="mb-6 inline-block font-bold tracking-[8px] text-gray-800 dark:text-gray-100 uppercase">
               Contact Information
             </span>

@@ -38,7 +38,7 @@ export default function Profile() {
         opacity: 0,
       }}
     >
-      <div className="p-10 xl:p-20">
+      <div className="p-6 sm:p-8 md:p-10 xl:p-20">
         <span className="mb-12 inline-block font-bold tracking-[8px] text-gray-800 dark:text-gray-100 uppercase">
           About Me
         </span>
@@ -49,8 +49,8 @@ export default function Profile() {
             </p>
           ))}
         </div>
-        <div className="mt-16 flex justify-between">
-          <div className="md:w-[45%]">
+        <div className="mt-8 md:mt-16 flex flex-col md:flex-row justify-between gap-8">
+          <div className="w-full md:w-[45%]">
             <span className="mb-12 inline-block font-bold tracking-[8px] text-gray-800 dark:text-gray-100 uppercase">
               Education
             </span>
@@ -80,7 +80,7 @@ export default function Profile() {
               </div>
             </div>
           </div>
-          <div className="md:w-[50%]">
+          <div className="w-full md:w-[50%]">
             <span className="mb-12 inline-block font-bold tracking-[8px] text-gray-800 dark:text-gray-100 uppercase">
               Work Experience
             </span>

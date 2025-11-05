@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="flex h-16 items-center justify-between bg-white dark:bg-gray-900 text-black dark:text-white">
       <h1 className="w-full text-lg">Copyright © 2025</h1>
-      <div className="md:flex">
+      <div className="flex gap-4">
         <a
           target="_blank"
           rel="noopener noreferrer"

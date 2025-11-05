@@ -14,6 +14,10 @@ export default function Header({ navItems }: NavbarProps) {
     setNav(!nav);
   };
 
+  const closeNav = () => {
+    setNav(false);
+  };
+
   const title = 'software engineer.';
   const navItemStyle =
     'p-2 pl-4 pr-4 hover:bg-black dark:hover:bg-white cursor-pointer duration-500 hover:text-white dark:hover:text-black text-lg whitespace-nowrap';
@@ -63,6 +67,7 @@ export default function Header({ navItems }: NavbarProps) {
             <NavLink
               key={item.id}
               to={`${item.route}`}
+              onClick={closeNav}
               className="block cursor-pointer border-b border-gray-600 dark:border-gray-700 p-4 duration-300 hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black"
             >
               {item.text}
