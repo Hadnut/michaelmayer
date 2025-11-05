@@ -22,23 +22,22 @@ export default function Header({ navItems }: NavbarProps) {
     <header className="flex h-16 items-center justify-between bg-white dark:bg-gray-900 text-black dark:text-white">
       {/* Logo */}
       <h1 className="flex-shrink-0 text-2xl font-extrabold">{title}</h1>
-      {/* Desktop Navigation */}
-      <ul className="ml-4 hidden flex-shrink-0 md:flex">
-        {navItems.map((item) => (
-          <NavLink
-            key={item.id}
-            to={`${item.route}`}
-            className={({ isActive }) =>
-              isActive ? 'bg-black dark:bg-white text-white dark:text-black ' + navItemStyle : navItemStyle
-            }
-          >
-            {item.text}
-          </NavLink>
-        ))}
-      </ul>
 
-      {/* Theme Toggle */}
-      <div className="hidden md:block ml-4">
+      {/* Desktop Navigation and Theme Toggle */}
+      <div className="hidden md:flex items-center gap-4">
+        <ul className="flex flex-shrink-0">
+          {navItems.map((item) => (
+            <NavLink
+              key={item.id}
+              to={`${item.route}`}
+              className={({ isActive }) =>
+                isActive ? 'bg-black dark:bg-white text-white dark:text-black ' + navItemStyle : navItemStyle
+              }
+            >
+              {item.text}
+            </NavLink>
+          ))}
+        </ul>
         <ThemeToggle />
       </div>
 
