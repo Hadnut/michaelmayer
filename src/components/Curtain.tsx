@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
+import { useTheme } from '../contexts/ThemeContext';
 
 const Curtain = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [lineAnimation, setLineAnimation] = useState<boolean>(false);
+  const { theme } = useTheme();
 
   useEffect(() => {
     // Simulate a 2-second delay
@@ -22,17 +24,19 @@ const Curtain = () => {
   }, []);
 
   const scale = !lineAnimation ? 'scale-y-0' : 'scale-y-100';
+  const bgColor = theme === 'light' ? 'bg-black' : 'bg-gray-900';
+  const borderColor = theme === 'light' ? 'border-white' : 'border-gray-400';
 
   return (
     <>
       <div
-        className={`fixed top-0 left-0 z-10 h-full w-full transform bg-black transition-transform duration-500 ${isLoaded ? '-translate-x-full' : '-translate-x-1/2'}`}
+        className={`fixed top-0 left-0 z-10 h-full w-full transform ${bgColor} transition-transform duration-500 ${isLoaded ? '-translate-x-full' : '-translate-x-1/2'}`}
       />
       <div
-        className={`fixed top-0 left-1/2 h-full w-0 origin-center transform border-l border-white ${isLoaded ? 'invisible' : 'visible'} transition-transform duration-1000 ${scale} z-20`}
+        className={`fixed top-0 left-1/2 h-full w-0 origin-center transform border-l ${borderColor} ${isLoaded ? 'invisible' : 'visible'} transition-transform duration-1000 ${scale} z-20`}
       />
       <div
-        className={`fixed top-0 left-0 z-10 h-full w-full transform bg-black transition-transform duration-500 ${isLoaded ? 'translate-x-full' : 'translate-x-1/2'}`}
+        className={`fixed top-0 left-0 z-10 h-full w-full transform ${bgColor} transition-transform duration-500 ${isLoaded ? 'translate-x-full' : 'translate-x-1/2'}`}
       />
     </>
   );

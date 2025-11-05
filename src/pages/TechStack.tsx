@@ -179,6 +179,36 @@ export default function TechStack() {
               ))}
             </div>
           </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{
+              opacity: 1,
+              y: 0,
+              transition: { delay: 0.7, duration: 0.5 },
+            }}
+          >
+            <h3 className="mb-4 inline-block font-bold tracking-[8px] text-gray-800 dark:text-gray-100 uppercase">
+              AI & Development Tools
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {[
+                'Claude Code',
+                'Roo Code',
+                'GitHub Copilot',
+                'ChatGPT',
+                'AI-Assisted Development',
+                'Prompt Engineering',
+              ].map((tech, index) => (
+                <span
+                  key={index}
+                  className="inline-block rounded-full border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 px-3 py-1 text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors hover:border-gray-300 dark:hover:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </div>
     </motion.div>
