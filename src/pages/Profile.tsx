@@ -1,4 +1,4 @@
-import { useQuery } from 'react-query';
+import { useQuery } from '@tanstack/react-query';
 import { motion } from 'motion/react';
 
 const profileQuery = () => ({
@@ -7,14 +7,14 @@ const profileQuery = () => ({
 });
 
 const getProfile = async () =>
-  (await fetch(`../../content/profile.json`).then((res) => res.json())) as Profile;
+  (await fetch(`../../content/profile.json`).then((res) => res.json())) as ProfileData;
 
 interface Skill {
   name: string;
   value: number;
 }
 
-interface Profile {
+interface ProfileData {
   aboutSection: {
     name: string;
     address: string;
@@ -39,7 +39,7 @@ export default function Profile() {
       }}
     >
       <div className="p-10 xl:p-20">
-        <span className="mb-12 inline-block font-bold uppercase tracking-[8px] text-[#333]">
+        <span className="mb-12 inline-block font-bold tracking-[8px] text-[#333] uppercase">
           About Me
         </span>
         <div className="mb-8">
@@ -51,7 +51,7 @@ export default function Profile() {
         </div>
         <div className="mt-16 flex justify-between">
           <div className="md:w-[45%]">
-            <span className="mb-12 inline-block font-bold uppercase tracking-[8px] text-[#333]">
+            <span className="mb-12 inline-block font-bold tracking-[8px] text-[#333] uppercase">
               Education
             </span>
             <div className="space-y-6">
@@ -67,39 +67,50 @@ export default function Profile() {
                 <p className="text-gray-600">Grade: 1.7</p>
                 <p className="text-sm text-gray-500">2011 - 2014</p>
               </div>
+            </div>{' '}
+            <span className="mt-16 mb-12 inline-block font-bold tracking-[8px] text-[#333] uppercase">
+              Interessts
+            </span>
+            <div>
+              <div>
+                <p className="text-gray-700">Road Cycling</p>
+                <p className="text-gray-700">Snowboarding</p>
+                <p className="text-gray-700">Road Cycling</p>
+                <p className="text-gray-700">Road Cycling</p>
+              </div>
             </div>
           </div>
           <div className="md:w-[50%]">
-            <span className="mb-12 inline-block font-bold uppercase tracking-[8px] text-[#333]">
+            <span className="mb-12 inline-block font-bold tracking-[8px] text-[#333] uppercase">
               Work Experience
             </span>
             <div>
               <div className="relative border-l-2 border-gray-200 pl-6">
-                <div className="absolute -left-2 top-1 h-4 w-4 rounded-full bg-[#333]"></div>
+                <div className="absolute top-1 -left-2 h-4 w-4 rounded-full bg-[#333]"></div>
                 <h3 className="mb-1 font-bold text-[#333]">Lead Software Engineer</h3>
                 <p className="mb-1 text-gray-700">MaibornWolff GmbH</p>
                 <p className="pb-6 text-sm text-gray-500">2023 - Present</p>
               </div>
               <div className="relative border-l-2 border-gray-200 pl-6">
-                <div className="absolute -left-2 top-1 h-4 w-4 rounded-full bg-[#333]"></div>
+                <div className="absolute top-1 -left-2 h-4 w-4 rounded-full bg-[#333]"></div>
                 <h3 className="mb-1 font-bold text-[#333]">Senior Software Engineer</h3>
                 <p className="mb-1 text-gray-700">MaibornWolff GmbH</p>
-                <p className="pb-6 text-sm  text-gray-500">2020 - 2023</p>
+                <p className="pb-6 text-sm text-gray-500">2020 - 2023</p>
               </div>
               <div className="relative border-l-2 border-gray-200 pl-6">
-                <div className="absolute -left-2 top-1 h-4 w-4 rounded-full bg-[#333]"></div>
+                <div className="absolute top-1 -left-2 h-4 w-4 rounded-full bg-[#333]"></div>
                 <h3 className="mb-1 font-bold text-[#333]">Professional Software Engineer</h3>
                 <p className="mb-1 text-gray-700">MaibornWolff GmbH</p>
-                <p className="pb-6 text-sm  text-gray-500">2019 - 2020</p>
+                <p className="pb-6 text-sm text-gray-500">2019 - 2020</p>
               </div>
               <div className="relative border-l-2 border-gray-200 pl-6">
-                <div className="absolute -left-2 top-1 h-4 w-4 rounded-full bg-[#333]"></div>
+                <div className="absolute top-1 -left-2 h-4 w-4 rounded-full bg-[#333]"></div>
                 <h3 className="mb-1 font-bold text-[#333]">Junior Software Engineer</h3>
                 <p className="mb-1 text-gray-700">MaibornWolff GmbH</p>
-                <p className="pb-6 text-sm  text-gray-500">2017 - 2019</p>
+                <p className="pb-6 text-sm text-gray-500">2017 - 2019</p>
               </div>
               <div className="relative border-l-2 border-gray-200 pl-6">
-                <div className="absolute -left-2 top-1 h-4 w-4 rounded-full bg-[#333]"></div>
+                <div className="absolute top-1 -left-2 h-4 w-4 rounded-full bg-[#333]"></div>
                 <h3 className="mb-1 font-bold text-[#333]">Internship Web Engineering</h3>
                 <p className="mb-1 text-gray-700">Robert Bosch GmbH</p>
                 <p className="text-sm text-gray-500">2015 - 2016</p>

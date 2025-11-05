@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 
 export default function Layout() {
   return (
-    <main className="flex flex-1 overflow-hidden bg-blue-100 bg-opacity-20">
+    <main className="bg-opacity-20 flex flex-1 overflow-hidden bg-blue-100">
       <div className="grid md:grid-cols-8">
         <div className="overflow-hidden md:col-span-3">
           <img

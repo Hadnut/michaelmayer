@@ -9,7 +9,7 @@ import Contact from './pages/Contact';
 import Profile from './pages/Profile';
 import TechStack from './pages/TechStack';
 import Projects from './pages/Projects';
-import { QueryClient, QueryClientProvider } from 'react-query';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 export function main() {
   const queryClient = new QueryClient();

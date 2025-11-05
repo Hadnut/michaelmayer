@@ -1,4 +1,4 @@
-import { useQuery } from 'react-query';
+import { useQuery } from '@tanstack/react-query';
 import { motion } from 'motion/react';
 
 const profileQuery = () => ({
@@ -7,14 +7,14 @@ const profileQuery = () => ({
 });
 
 const getProfile = async () =>
-  (await fetch(`../../content/profile.json`).then((res) => res.json())) as Profile;
+  (await fetch(`../../content/profile.json`).then((res) => res.json())) as ProfileData;
 
 interface Skill {
   name: string;
   value: number;
 }
 
-interface Profile {
+interface ProfileData {
   aboutSection: {
     name: string;
     address: string;
@@ -42,7 +42,7 @@ export default function TechStack() {
       <div className="p-10 xl:p-20">
         {/* Core Skills */}
         <div className="mb-12">
-          <h3 className="mb-6 inline-block font-bold uppercase tracking-[8px] text-[#333]">
+          <h3 className="mb-6 inline-block font-bold tracking-[8px] text-[#333] uppercase">
             Core Skills
           </h3>
           <div className="flex flex-wrap gap-3">
@@ -74,7 +74,7 @@ export default function TechStack() {
               transition: { delay: 0.3, duration: 0.5 },
             }}
           >
-            <h3 className="mb-4 inline-block font-bold uppercase tracking-[8px] text-[#333]">
+            <h3 className="mb-4 inline-block font-bold tracking-[8px] text-[#333] uppercase">
               Frontend Technologies
             </h3>
             <div className="flex flex-wrap gap-2">
@@ -99,7 +99,7 @@ export default function TechStack() {
               transition: { delay: 0.4, duration: 0.5 },
             }}
           >
-            <h3 className="mb-4 inline-block font-bold uppercase tracking-[8px] text-[#333]">
+            <h3 className="mb-4 inline-block font-bold tracking-[8px] text-[#333] uppercase">
               Backend & Database
             </h3>
             <div className="flex flex-wrap gap-2">
@@ -132,7 +132,7 @@ export default function TechStack() {
               transition: { delay: 0.5, duration: 0.5 },
             }}
           >
-            <h3 className="mb-4 inline-block font-bold uppercase tracking-[8px] text-[#333]">
+            <h3 className="mb-4 inline-block font-bold tracking-[8px] text-[#333] uppercase">
               Cloud & DevOps
             </h3>
             <div className="flex flex-wrap gap-2">
@@ -165,7 +165,7 @@ export default function TechStack() {
               transition: { delay: 0.6, duration: 0.5 },
             }}
           >
-            <h3 className="mb-4 inline-block font-bold uppercase tracking-[8px] text-[#333]">
+            <h3 className="mb-4 inline-block font-bold tracking-[8px] text-[#333] uppercase">
               Tools & Testing
             </h3>
             <div className="flex flex-wrap gap-2">

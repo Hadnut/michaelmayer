@@ -1,4 +1,4 @@
-import { useQuery } from 'react-query';
+import { useQuery } from '@tanstack/react-query';
 import { motion } from 'motion/react';
 
 const profileQuery = () => ({
@@ -7,9 +7,9 @@ const profileQuery = () => ({
 });
 
 const getProfile = async () =>
-  (await fetch(`../../content/profile.json`).then((res) => res.json())) as Profile;
+  (await fetch(`../../content/profile.json`).then((res) => res.json())) as ProfileData;
 
-interface Profile {
+interface ProfileData {
   aboutSection: {
     name: string;
     address: string;
@@ -34,7 +34,7 @@ export default function Contact() {
       }}
     >
       <div className="p-10 xl:p-20">
-        <span className="mb-12 inline-block font-bold uppercase tracking-[8px] text-[#333]">
+        <span className="mb-12 inline-block font-bold tracking-[8px] text-[#333] uppercase">
           Get in Touch
         </span>
 
@@ -52,7 +52,7 @@ export default function Contact() {
           </div>
 
           <div className="md:w-[50%]">
-            <span className="mb-6 inline-block font-bold uppercase tracking-[8px] text-[#333]">
+            <span className="mb-6 inline-block font-bold tracking-[8px] text-[#333] uppercase">
               Contact Information
             </span>
             <ul>
@@ -84,7 +84,7 @@ export default function Contact() {
         </div>
 
         <div className="mt-16">
-          <span className="mb-6 inline-block font-bold uppercase tracking-[8px] text-[#333]">
+          <span className="mb-6 inline-block font-bold tracking-[8px] text-[#333] uppercase">
             Let&apos;s Connect
           </span>
           <p className="leading-relaxed text-gray-700">

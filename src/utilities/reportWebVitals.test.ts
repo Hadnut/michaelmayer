@@ -1,5 +1,5 @@
 import { vi } from 'vitest';
-import { onCLS, onFCP, onFID, onINP, onLCP, onTTFB } from 'web-vitals';
+import { onCLS, onFCP, onINP, onLCP, onTTFB } from 'web-vitals';
 import reportWebVitals from './reportWebVitals';
 
 vi.mock('web-vitals', async (importActual) => {
@@ -8,7 +8,6 @@ vi.mock('web-vitals', async (importActual) => {
     ...actual,
     onCLS: vi.fn(),
     onFCP: vi.fn(),
-    onFID: vi.fn(),
     onINP: vi.fn(),
     onLCP: vi.fn(),
     onTTFB: vi.fn(),
@@ -27,7 +26,6 @@ describe('reportWebVitals.test.ts', () => {
     await reportWebVitals();
     expect(onCLS).not.toHaveBeenCalled();
     expect(onFCP).not.toHaveBeenCalled();
-    expect(onFID).not.toHaveBeenCalled();
     expect(onINP).not.toHaveBeenCalled();
     expect(onLCP).not.toHaveBeenCalled();
     expect(onTTFB).not.toHaveBeenCalled();
@@ -43,12 +41,6 @@ describe('reportWebVitals.test.ts', () => {
     await reportWebVitals(reportHandler, reportOptions);
     expect(onFCP).toHaveBeenCalledTimes(1);
     expect(onFCP).toHaveBeenCalledWith(reportHandler, reportOptions);
-  });
-
-  it('should register the First Input Delay (FID) metric reporter', async () => {
-    await reportWebVitals(reportHandler, reportOptions);
-    expect(onFID).toHaveBeenCalledTimes(1);
-    expect(onFID).toHaveBeenCalledWith(reportHandler, reportOptions);
   });
 
   it('should register the Interaction to next Paint (INP) metric reporter', async () => {

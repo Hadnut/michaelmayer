@@ -8,10 +8,9 @@ import type { ReportCallback, ReportOpts } from 'web-vitals';
  */
 async function reportWebVitals(onReport?: ReportCallback, opts?: ReportOpts) {
   if (onReport && onReport instanceof Function) {
-    const { onCLS, onFCP, onFID, onINP, onLCP, onTTFB } = await import('web-vitals');
+    const { onCLS, onFCP, onINP, onLCP, onTTFB } = await import('web-vitals');
     onCLS(onReport, opts);
     onFCP(onReport, opts);
-    onFID(onReport, opts);
     onINP(onReport, opts);
     onLCP(onReport, opts);
     onTTFB(onReport, opts);

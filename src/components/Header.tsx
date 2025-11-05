@@ -45,12 +45,12 @@ export default function Header({ navItems }: NavbarProps) {
       <ul
         className={
           nav
-            ? 'fixed left-0 top-0 h-full w-[60%] border-r border-r-gray-900 bg-white duration-500 ease-in-out md:hidden'
-            : 'fixed bottom-0 left-[-100%] top-0 w-[60%] duration-500 ease-in-out'
+            ? 'fixed top-0 left-0 h-full w-[60%] border-r border-r-gray-900 bg-white duration-500 ease-in-out md:hidden'
+            : 'fixed top-0 bottom-0 left-[-100%] w-[60%] duration-500 ease-in-out'
         }
       >
         {/* Mobile Logo */}
-        <h1 className="m-4 w-full text-3xl font-bold text-gray-500 ">{title}</h1>
+        <h1 className="m-4 w-full text-3xl font-bold text-gray-500">{title}</h1>
 
         {/* Mobile Navigation Items */}
         {navItems.map((item, index) => (

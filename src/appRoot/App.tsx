@@ -15,7 +15,7 @@ export default function App() {
   return (
     <>
       <Curtain />
-      <div className="flex h-screen flex-col pl-20 pr-20">
+      <div className="flex h-screen flex-col pr-20 pl-20">
         <Header navItems={navItems} />
         <Layout />
         <Footer />

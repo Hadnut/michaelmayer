@@ -1,6 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --animate-spin-react: spin 20s linear infinite;
+}
 
 :root {
   @apply bg-white text-black antialiased;

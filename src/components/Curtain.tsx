@@ -26,13 +26,13 @@ const Curtain = () => {
   return (
     <>
       <div
-        className={`fixed left-0 top-0 z-10 h-full w-full transform bg-black transition-transform duration-500 ${isLoaded ? '-translate-x-full' : '-translate-x-1/2'}`}
+        className={`fixed top-0 left-0 z-10 h-full w-full transform bg-black transition-transform duration-500 ${isLoaded ? '-translate-x-full' : '-translate-x-1/2'}`}
       />
       <div
-        className={`fixed left-1/2 top-0 h-full w-0 origin-center transform border-l border-white ${isLoaded ? 'invisible' : 'visible'} transition-transform duration-1000 ${scale} z-20`}
+        className={`fixed top-0 left-1/2 h-full w-0 origin-center transform border-l border-white ${isLoaded ? 'invisible' : 'visible'} transition-transform duration-1000 ${scale} z-20`}
       />
       <div
-        className={`fixed left-0 top-0 z-10 h-full w-full transform bg-black transition-transform duration-500 ${isLoaded ? 'translate-x-full' : 'translate-x-1/2'}`}
+        className={`fixed top-0 left-0 z-10 h-full w-full transform bg-black transition-transform duration-500 ${isLoaded ? 'translate-x-full' : 'translate-x-1/2'}`}
       />
     </>
   );

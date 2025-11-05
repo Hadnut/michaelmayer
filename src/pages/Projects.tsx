@@ -145,7 +145,7 @@ export default function Projects() {
       }}
     >
       <div className="p-10 xl:p-20">
-        <span className="mb-12 inline-block font-bold uppercase tracking-[8px] text-[#333]">
+        <span className="mb-12 inline-block font-bold tracking-[8px] text-[#333] uppercase">
           Projects
         </span>
 
