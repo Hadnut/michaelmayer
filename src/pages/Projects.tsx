@@ -145,7 +145,7 @@ export default function Projects() {
       }}
     >
       <div className="p-10 xl:p-20">
-        <span className="mb-12 inline-block font-bold tracking-[8px] text-[#333] uppercase">
+        <span className="mb-12 inline-block font-bold tracking-[8px] text-gray-800 dark:text-gray-100 uppercase">
           Projects
         </span>
 
@@ -159,32 +159,32 @@ export default function Projects() {
                 y: 0,
                 transition: { delay: index * 0.1, duration: 0.5 },
               }}
-              className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+              className="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 shadow-sm transition-shadow hover:shadow-md"
             >
               <div className="flex items-start justify-between">
                 <div className="flex-1">
                   <div className="mb-3">
-                    <h3 className="mb-1 text-xl font-bold text-[#333]">{project.title}</h3>
-                    <div className="flex flex-col text-sm text-gray-600 sm:flex-row sm:items-center sm:gap-4">
+                    <h3 className="mb-1 text-xl font-bold text-gray-800 dark:text-gray-100">{project.title}</h3>
+                    <div className="flex flex-col text-sm text-gray-600 dark:text-gray-400 sm:flex-row sm:items-center sm:gap-4">
                       <span className="font-medium">{project.company}</span>
-                      <span className="text-gray-500">{project.period}</span>
+                      <span className="text-gray-500 dark:text-gray-500">{project.period}</span>
                     </div>
                   </div>
 
                   <div className="mb-3">
-                    <span className="text-sm font-semibold text-gray-600">Role: </span>
-                    <span className="text-sm text-gray-700">{project.role}</span>
+                    <span className="text-sm font-semibold text-gray-600 dark:text-gray-400">Role: </span>
+                    <span className="text-sm text-gray-700 dark:text-gray-300">{project.role}</span>
                   </div>
 
-                  <p className="mb-4 leading-relaxed text-gray-700">{project.description}</p>
+                  <p className="mb-4 leading-relaxed text-gray-700 dark:text-gray-300">{project.description}</p>
 
                   <div className="mb-4">
-                    <h4 className="mb-2 text-sm font-semibold text-gray-600">Technologies:</h4>
+                    <h4 className="mb-2 text-sm font-semibold text-gray-600 dark:text-gray-400">Technologies:</h4>
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech, techIndex) => (
                         <span
                           key={techIndex}
-                          className="inline-block rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-700"
+                          className="inline-block rounded-full bg-gray-100 dark:bg-gray-700 px-3 py-1 text-xs font-medium text-gray-700 dark:text-gray-300"
                         >
                           {tech}
                         </span>
@@ -195,12 +195,12 @@ export default function Projects() {
               </div>
 
               {project.link && (
-                <div className="mt-4 border-t border-gray-100 pt-4">
+                <div className="mt-4 border-t border-gray-100 dark:border-gray-700 pt-4">
                   <a
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center text-sm font-medium text-blue-600 transition-colors hover:text-blue-800"
+                    className="inline-flex items-center text-sm font-medium text-blue-600 dark:text-blue-400 transition-colors hover:text-blue-800 dark:hover:text-blue-300"
                   >
                     View Project →
                   </a>

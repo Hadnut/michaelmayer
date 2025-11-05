@@ -2,6 +2,7 @@ import Layout from '../pages/Layout';
 import Header from '../components/Header';
 import Curtain from '../components/Curtain';
 import Footer from '../components/Footer';
+import { ThemeProvider } from '../contexts/ThemeContext';
 
 export default function App() {
   const navItems = [
@@ -13,13 +14,13 @@ export default function App() {
   ];
 
   return (
-    <>
+    <ThemeProvider>
       <Curtain />
       <div className="flex h-screen flex-col pr-20 pl-20">
         <Header navItems={navItems} />
         <Layout />
         <Footer />
       </div>
-    </>
+    </ThemeProvider>
   );
 }

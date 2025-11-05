@@ -23,7 +23,7 @@ export default function Home() {
             opacity: 0,
           }}
         >
-          <h1 className="text-6xl font-extrabold text-gray-800">MICHAEL MAYER</h1>
+          <h1 className="text-6xl font-extrabold text-gray-800 dark:text-gray-100">MICHAEL MAYER</h1>
         </motion.div>
 
         <motion.div
@@ -37,7 +37,7 @@ export default function Home() {
             opacity: 0,
           }}
         >
-          <div className="mt-8 mb-8 w-20 border-2 border-black"></div>
+          <div className="mt-8 mb-8 w-20 border-2 border-black dark:border-white"></div>
         </motion.div>
 
         <motion.div
@@ -51,8 +51,8 @@ export default function Home() {
             opacity: 0,
           }}
         >
-          <h2 className="mb-8 text-3xl text-black">
-            <span className="text-gray-500">Lead</span> {headline}
+          <h2 className="mb-8 text-3xl text-black dark:text-white">
+            <span className="text-gray-500 dark:text-gray-400">Lead</span> {headline}
           </h2>
         </motion.div>
 
@@ -68,7 +68,7 @@ export default function Home() {
           }}
         >
           <NavLink
-            className="hover:bg-opacity-0 block w-fit border-2 border-black bg-black px-7 py-4 font-bold text-white transition-all duration-300 hover:text-black"
+            className="block w-fit border-2 border-black dark:border-white bg-black dark:bg-white px-7 py-4 font-bold text-white dark:text-black transition-all duration-300 hover:bg-transparent hover:text-black dark:hover:bg-transparent dark:hover:text-white"
             to={'/contact'}
           >
             Get in Touch
