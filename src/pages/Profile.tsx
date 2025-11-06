@@ -69,14 +69,14 @@ export default function Profile() {
               </div>
             </div>{' '}
             <span className="mt-16 mb-12 inline-block font-bold tracking-[8px] text-gray-800 dark:text-gray-100 uppercase">
-              Interessts
+              Interests
             </span>
             <div>
               <div>
                 <p className="text-gray-700 dark:text-gray-300">Road Cycling</p>
                 <p className="text-gray-700 dark:text-gray-300">Snowboarding</p>
-                <p className="text-gray-700 dark:text-gray-300">Road Cycling</p>
-                <p className="text-gray-700 dark:text-gray-300">Road Cycling</p>
+                <p className="text-gray-700 dark:text-gray-300">Hiking</p>
+                <p className="text-gray-700 dark:text-gray-300">Travel</p>
               </div>
             </div>
           </div>
