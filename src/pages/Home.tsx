@@ -11,7 +11,7 @@ export default function Home() {
   ]);
 
   return (
-    <div className="flex h-full flex-col md:flex-row md:items-center md:justify-start overflow-hidden">
+    <div className="flex h-full flex-col md:flex-row md:items-center md:justify-start overflow-hidden md:overflow-visible overflow-y-auto">
       {/* Profile Image - Mobile Only (Top Section) */}
       <motion.div
         className="md:hidden flex-1 -mx-6 -mt-8"
