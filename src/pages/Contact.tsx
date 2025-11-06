@@ -8,7 +8,7 @@ const profileQuery = () => ({
 });
 
 const getProfile = async () =>
-  (await fetch(`../../content/profile.json`).then((res) => res.json())) as ProfileData;
+  (await fetch(`${import.meta.env.BASE_URL}content/profile.json`).then((res) => res.json())) as ProfileData;
 
 interface ProfileData {
   aboutSection: {
