@@ -54,7 +54,7 @@ export default function Header({ navItems }: NavbarProps) {
       <ul
         className={
           nav
-            ? 'fixed top-0 left-0 h-full w-[60%] border-r border-r-gray-900 dark:border-r-gray-700 bg-white dark:bg-gray-900 duration-500 ease-in-out md:hidden'
+            ? 'fixed top-0 left-0 h-full w-[60%] border-r border-r-gray-900 dark:border-r-gray-700 bg-white dark:bg-gray-900 duration-500 ease-in-out md:hidden z-50'
             : 'fixed top-0 bottom-0 left-[-100%] w-[60%] duration-500 ease-in-out'
         }
       >
